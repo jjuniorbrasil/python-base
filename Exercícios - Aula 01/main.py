@@ -98,7 +98,26 @@ print('Área do triângulo: ' + str(a) + ' u.a.')
 print('\nDigite um número: ')
 x = int(input())
 
+if x > 1:
+  for i in range(2, int(x**0.5) + 1):
+      if x % i == 0:
+          print(f"{x} não é um número primo.")
+          break
+  else:
+      print(f"{x} é um número primo.")
+else:
+  print(f"{x} não é um número primo.")
+
 # EX 14/15
 
 print('\nDigite um número: ')
 x = int(input())
+
+if x % 3 == 0 and x % 5 == 0:
+  print(str(x) + " é divisível por 3 e por 5.")
+elif x % 3 == 0:
+  print(str(x) + " é divisível por 3, mas não por 5.")
+elif x % 5 == 0:
+  print(str(x) + " é divisível por 5, mas não por 3.")
+else:
+  print(str(x) + " não é divisível por 3 nem por 5.")
